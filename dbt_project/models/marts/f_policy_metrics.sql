@@ -18,11 +18,7 @@ select
             coalesce(pt.written_premium_base, 0) + coalesce(pt.endorsement_delta_total, 0) as net_written_premium,
             coalesce(pay.collected_premium_total, 0) as collected_premium_total,
             pt.agent_id,
-            a.agent_name,
-            a.commission_rate_bps,
-            a.commission_rate,
-            round(net_written_premium * a.commission_rate, 2) as net_written_commission_amount,
-            round(collected_premium_total * a.commission_rate, 2) as collected_commission_amount
+            a.agent_name
 
 from        {{ ref('policy_premium_transactions') }} pt
             left join {{ ref('stg_agents') }} a 
