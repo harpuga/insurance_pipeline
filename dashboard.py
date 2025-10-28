@@ -227,23 +227,7 @@ def main():
     
     with col2:
         st.subheader("🎯 Commission Analysis")
-        commission_data = filtered_data.groupby('agent_name').agg({
-            'net_written_commission_amount': 'sum',
-            'collected_commission_amount': 'sum'
-        }).reset_index()
-        
-        fig_commission = px.scatter(
-            commission_data,
-            x='net_written_commission_amount',
-            y='collected_commission_amount',
-            hover_data=['agent_name'],
-            title="Written vs Collected Commission",
-            labels={
-                'net_written_commission_amount': 'Written Commission ($)',
-                'collected_commission_amount': 'Collected Commission ($)'
-            }
-        )
-        st.plotly_chart(fig_commission, use_container_width=True)
+        # Commission Analysis removed due to column removal
     
     # Data Table
     st.subheader("📋 Detailed Policy Data")
@@ -252,7 +236,7 @@ def main():
     display_columns = [
         'policy_id', 'insured_name', 'line_of_business', 'status',
         'inception_date', 'expiration_date', 'net_written_premium',
-        'collected_premium_total', 'agent_name', 'commission_rate_bps'
+        'collected_premium_total', 'agent_name'
     ]
     
     available_columns = [col for col in display_columns if col in filtered_data.columns]
