@@ -1,0 +1,14 @@
+dataset,check,failed_rows,total_rows
+policies,Unique policy_id,0,200
+endorsements,Unique endorsement_id,0,315
+payments,Unique payment_id,0,598
+endorsements,Referential integrity policy_id->policy_id,0,315
+payments,Referential integrity policy_id->policy_id,0,598
+policies,Referential integrity agent_id->agent_id,0,200
+policies,Non-negative written_premium,0,200
+payments,Non-negative amount,0,598
+policies,Valid inception_date,0,200
+policies,Valid expiration_date,0,200
+policies,Date logic inception_date<expiration_date,0,200
+endorsements,Valid effective_date,0,315
+payments,Valid payment_date,0,598

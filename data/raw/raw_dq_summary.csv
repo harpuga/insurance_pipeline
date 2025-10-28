@@ -1,0 +1,7 @@
+dataset,check,failed_rows,total_rows
+policies,Unique policy_id,0,200
+endorsements,Unique endorsement_id,0,315
+payments,Unique payment_id,0,598
+endorsements,Referential integrity policy_id->policy_id,0,315
+payments,Referential integrity policy_id->policy_id,0,598
+payments,Non-negative amount,0,598

@@ -1,0 +1,6 @@
+pandas==2.2.2
+pyarrow
+duckdb
+dbt-duckdb==1.7.1
+streamlit
+plotly

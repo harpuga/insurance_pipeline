@@ -1,0 +1,14 @@
+name: insurance_dwh
+version: 1.0
+profile: insurance_dwh
+model-paths: ["models"]
+target-path: "target"
+
+models:
+  insurance_dwh:
+    staging:
+      materialized: table
+    dwh:
+      materialized: table
+    marts:
+      materialized: table

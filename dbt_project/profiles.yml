@@ -1,0 +1,7 @@
+insurance_dwh:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: /app/data/db/warehouse.duckdb
+      threads: 4
